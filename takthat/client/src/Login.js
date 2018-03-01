@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class login extends React.Component {
+export default class Login extends React.Component {
   state = {
     userName: "",
     password: ""
