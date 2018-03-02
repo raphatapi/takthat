@@ -8,6 +8,8 @@ var path 	 = require('path'),
 	fs 		 = require('fs');
 var http 	 = require('http');
 var server 	 = http.createServer(app);
+var bodyParser = require ('body-parser');
+var session = require ('express-session');
 
 
 var configDB = require('./config/database.js');
@@ -16,20 +18,20 @@ mongoose.connect(configDB.url);
 
 require('./config/passport')(passport); 
 
-app.configure(function() {
 
-	app.use(express.cookieParser());
-	app.use(express.bodyParser()); 
-	app.use(express.static(path.join(__dirname, '/client/public')));
-	app.set('views', __dirname + '/views');
-	app.engine('html', require('ejs').renderFile);
-	app.use(express.session({ secret: 'maximus' })); 
-	app.use(express.bodyParser({uploadDir:'/images'}));
-	app.use(passport.initialize());
-	app.use(passport.session()); 
-	app.use(flash()); 
 
-});
+// app.use(express.cookieParser());
+// app.use(express.bodyParser()); 
+app.use(express.static(path.join(__dirname, '/client/public')));
+app.set('views', __dirname + '/views');
+app.engine('html', require('ejs').renderFile);
+// app.use(express.session({ secret: 'maximus' })); 
+// app.use(express.bodyParser({uploadDir:'/images'}));
+app.use(passport.initialize());
+app.use(passport.session()); 
+app.use(flash()); 
+
+
 
 
 require('./models/routes.js')(app, passport,server); 

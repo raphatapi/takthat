@@ -1,5 +1,5 @@
-var User 	= require('../app/models/user');
-var Friend 	= require('../app/models/friend');
+var User 	= require('../models/user');
+var Friend 	= require('../models/friend');
 	async 	= require("async");
 var path 	= require('path'),
     fs 		= require('fs');
