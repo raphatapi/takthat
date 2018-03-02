@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 var bcrypt   = require('bcrypt-nodejs');
+const passport = require('../config/passport');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({

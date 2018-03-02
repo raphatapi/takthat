@@ -3,6 +3,7 @@ var Friend 	= require('./models/friend');
 	async	= require("async");
 var path 	= require('path'),
     fs 		= require('fs');
+const passport = require('./config/passport');    
     
 module.exports = function(app, passport,server) {
 	app.get('/', function(request, response) {

@@ -34,7 +34,7 @@ app.use(flash());
 
 
 
-require('./models/routes.js')(app, passport,server); 
+var routes = require('./models/routes.js')(app, passport,server); 
 
 server.listen(port);
 console.log('Listening  to  port ' + port);
