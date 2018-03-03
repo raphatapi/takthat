@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html>
+<script type="text/javascript">
 <head>
 <meta http-equiv="Content-type" CONTENT="text/html; charset=utf-8">
 </head>
 <body id="weather-body" onload= "formatIframe()">
 <tr>
-<a href= "https://api.darksky.net/forecast/7dbf42258c64a005a20a940261b2d1ba/37.8267,-122.4233">
-</tr>
+<a href= "https://api.darksky.net/forecast/7dbf42258c64a005a20a940261b2d1ba">
+</tr>   
+        var options = {
+        enableHi   ghAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+      };
+      
+      function success(pos) {
+        var crd = pos.coords;
+      
+        console.log('Your current position is:');
+        console.log(`Latitude : ${crd.latitude}`);
+        console.log(`Longitude: ${crd.longitude}`);
+        console.log(`More or less ${crd.accuracy} meters.`);
+
+         navigator.geolocation.getCurrentPosition(success, error, options);
+      };
+      
+      function error(err) {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+      };
+      
+</script>
 </body>
