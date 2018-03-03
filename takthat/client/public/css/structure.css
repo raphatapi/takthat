@@ -233,10 +233,10 @@ body {
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 15px;
-	background: #a1d8f0;
-	background: -moz-linear-gradient(top, #badff3, #7acbed);
-	background: -webkit-gradient(linear, left top, left bottom, from(#badff3),
-		to(#7acbed) );
+	background: #797979;
+	background: -moz-linear-gradient(top, #badff3, #797979);
+	background: -webkit-gradient(linear, left top, left bottom, from(#797979),
+		to(#797979) );
 	-ms-filter:
 		"progid:DXImageTransform.Microsoft.gradient(startColorStr='#badff3', EndColorStr='#7acbed')";
 	border: 1px solid #7db0cc !important;
@@ -258,9 +258,9 @@ body {
 
 .btnLogin:hover,.btnLogin:focus,.btnLogin:active {
 	background: #a1d8f0;
-	background: -moz-linear-gradient(top, #7acbed, #badff3);
-	background: -webkit-gradient(linear, left top, left bottom, from(#7acbed),
-		to(#badff3) );
+	background: -moz-linear-gradient(top, #0250c5, #0250c5);
+	background: -webkit-gradient(linear, left top, left bottom, from(#0250c5),
+		to(#0250c5) );
 	-ms-filter:
 		"progid:DXImageTransform.Microsoft.gradient(startColorStr='#7acbed', EndColorStr='#badff3')";
 }
