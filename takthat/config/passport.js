@@ -1,21 +1,21 @@
 // local authentication
-// For more details go to https://github.com/jaredhanson/passport-local
+
 var LocalStrategy    = require('passport-local').Strategy;
 
 // Facebook authentication
-// For more details go to https://github.com/jaredhanson/passport-facebook
+
 var FacebookStrategy = require('passport-facebook').Strategy;
 var FACEBOOK_APP_ID = "<Insert Your Key Here>"
 var FACEBOOK_APP_SECRET = "<Insert Your Secret Key Here>";
 
 // Twitter authentication
-// For more details go to https://github.com/jaredhanson/passport-twitter
+//
 var TwitterStrategy = require('passport-twitter').Strategy;
 var TWITTER_CONSUMER_KEY = "<Insert Your Key Here>";
 var TWITTER_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
 
 // Google authentication
-// For more details go to https://github.com/jaredhanson/passport-google-oauth
+
 var GOOGLE_CONSUMER_KEY = "<Insert Your Key Here>";
 var GOOGLE_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
 var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy
