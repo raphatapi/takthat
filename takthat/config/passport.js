@@ -28,7 +28,7 @@ var TWITTER_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
 // ----------------- Google authentication -----------------------//
 // 	function google() {
 //  var googleKeys = require('gooKeys.js');
-//  var keys = require("./GooKeys.js");
+//  var keys = require("./gooKeys.js");
 //  var t = new twitter(keys);
 var GOOGLE_CONSUMER_KEY = "<Insert Your Key Here>";
 var GOOGLE_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
