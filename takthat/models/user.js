@@ -23,9 +23,12 @@ userSchema.methods.verifyPassword = function(password) {
 
 userSchema.methods.updateUser = function(request, response){
 
-	this.user.name = request.body.name;
-	this.user.address = request.body.address;
-	 this.user.save();
+	this.user.familyName = request.body.familyName;
+  this.user.firstName = request.body.firstName;
+  this.user.lastName = request.body.lastName;
+  this.user.email = request.body.email;
+  this.user.phone = request.body.phone;
+  this.user.save();
 	response.redirect('/user');
 };
 

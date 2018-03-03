@@ -72,8 +72,11 @@ module.exports = function(passport) {
                         return done(null, false, req.flash('signuperror', 'User already exists'));
                     } else {
                         var newUser = new User();
-			            newUser.user.username    = req.body.username;
-                        newUser.user.email    = email;
+			            newUser.user.firstName = req.body.firstName;
+                        newUser.user.lastName = req.body.lastName;
+                        newUser.user.familyName = req.body.familyName;
+                        newUser.user.email = req.body.email;
+                        newUser.user.phone = req.body.phone;
                         newUser.user.password = newUser.generateHash(password);
 			            newUser.user.name	= ''
 			            newUser.user.address	= ''
@@ -87,7 +90,7 @@ module.exports = function(passport) {
                 });
             } else {
                 var user = req.user;
-		        user.user.username    = req.body.username;
+		        user.user.firstName = req.body.username;
                 user.user.email    = email;
                 user.user.password = user.generateHash(password);
 			    user.user.name	= ''
