@@ -5,8 +5,8 @@ var LocalStrategy    = require('passport-local').Strategy;
 
 // ---------------- Facebook authentication -------------------//
 // function facebook() {
-//   var facebook = require('facebookKeys.js');
-//   var keys = require("./keys.js");
+//   var facebook = require('faceKeys.js');
+//   var keys = require("./faceKeys.js");
 //   var t = new twitter(keys);
 var FacebookStrategy = require('passport-facebook').Strategy;
 var FACEBOOK_APP_ID = "<Insert Your Key Here>"
@@ -17,7 +17,7 @@ var FACEBOOK_APP_SECRET = "<Insert Your Secret Key Here>";
 // --------------- Twitter authentication ----------------------//
 // function twitter() {
 //   var twitterKeys = require('twitKeys.js');
-//   var keys = require("./keys.js");
+//   var keys = require("./twitKeys.js");
 //   var t = new twitter(keys);
 var TwitterStrategy = require('passport-twitter').Strategy;
 var TWITTER_CONSUMER_KEY = "<Insert Your Key Here>";
@@ -28,7 +28,7 @@ var TWITTER_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
 // ----------------- Google authentication -----------------------//
 // 	function google() {
 //  var googleKeys = require('gooKeys.js');
-//  var keys = require("./keys.js");
+//  var keys = require("./GooKeys.js");
 //  var t = new twitter(keys);
 var GOOGLE_CONSUMER_KEY = "<Insert Your Key Here>";
 var GOOGLE_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
