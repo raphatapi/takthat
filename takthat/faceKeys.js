@@ -6,3 +6,8 @@ var facebookKeys = {
 };
 
 module.exports = facebookKeys;
+
+// function twitter() {
+//     var twitter = require('twitter');
+//     var keys = require("./keys.js");
+//     var t = new twitter(keys);
