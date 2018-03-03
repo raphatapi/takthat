@@ -2,30 +2,36 @@
 <html>
 <head>
 	<title>PurpleTree Login Form</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/structure.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/structure.css">
 
 </head>
-<body>
-<form action="/login" method="post" class="box login">
-	<fieldset class="boxBody">
-	<% if (message.length > 0) { %>
-		<div class="alert alert-message"><%= message %></div>
-	<% } %>
-	  <label>Email</label>
-	  <input class="input100" type="text" tabindex="1" placeholder="Enter Your Email Address" name="email" required>
- 	<label>Password</label>
-	  <input class="input100" type="password" tabindex="2"  placeholder="Enter Your Email Password" name="password" required>
-	</fieldset>
-	<footer>
 
-			<input type="submit" class="login100 btnLogin" value="Login" tabindex="4">
-	<input TYPE="button"class="login100 btnLogin" value="SignUp"  onClick="parent.location='/signup'">
-	 
-	<a href="/auth/facebook" ><img src="images/f.jpg" height="30px"
-/> </a><a href="/auth/twitter" ><img src="images/t.jpg" height="30px"
-/> </a><a href="/auth/google" ><img src="images/g.jpg" height="30px"
-/> </a>
+<body>
+
+	<form action="/login" method="post" class="box login">
+		<fieldset class="boxBody">
+			<% if (message.length > 0) { %>
+				<div class="alert alert-message"><%= message %></div>
+			<% } %>
+
+	  <label>Email</label>
+	  	<input class="input100 text-center" type="text" tabindex="1" placeholder="Enter Your Email Address" 				name="email" required>
+ 		<label>Password</label>
+	  	<input class="input100 text-center" type="password" tabindex="2"  placeholder="Enter Your Email Password" name="password" required>
+		</fieldset>
+
+
+	<footer>
+		<input type="submit" class="login100 btnLogin" value="Login" tabindex="4">
+		<input TYPE="button"class="login100 btnLogin" value="SignUp"  onClick="parent.location='/signup'">
+			<a href="/auth/facebook" ><img src="images/f.jpg" height="30px"/> </a>
+			<a href="/auth/twitter" ><img src="images/t.jpg" height="30px"/></a>
+			<a href="/auth/google" ><img src="images/g.jpg" height="30px"/> </a>
 	</footer>
 
 </form>
