@@ -90,7 +90,7 @@ module.exports = function(passport) {
                 });
             } else {
                 var user = req.user;
-		        user.user.firstName = req.body.username;
+		        user.user.username    = req.body.username;
                 user.user.email    = email;
                 user.user.password = user.generateHash(password);
 			    user.user.name	= ''
