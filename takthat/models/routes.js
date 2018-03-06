@@ -5,7 +5,7 @@ var path 	= require('path'),
     fs 		= require('fs');
 
 module.exports = function(app, passport,server) {
-	app.get('/', function(request, response) {
+	app.get('', function(request, response) {
 		response.render('index.html');
 	});
 	app.get('/user', auth, function(request, response) {

@@ -4,36 +4,41 @@ var LocalStrategy = require('passport-local').Strategy;
 
 
 // ---------------- Facebook authentication -------------------//
-function facebook() {
-  var FacebookStrategy = require('passport-facebook').Strategy;
-  var keys = require("../faceKeys.js");
-  var face = new FacebookStrategy(keys);
+var FacebookStrategy = require('passport-facebook').Strategy; 
 
-// var FACEBOOK_APP_ID = "<Insert Your Key Here>"
-// var FACEBOOK_APP_SECRET = "<Insert Your Secret Key Here>";
-// ---------------- / Facebook authentication / -------------------//
+// function facebook() {
+//   var FacebookStrategy = require('passport-facebook').Strategy;
+//   var keys = require("../faceKeys.js");
+//   var face = new FacebookStrategy(keys);
+// };
 
-
-// --------------- Twitter authentication ----------------------//
-function twitter() {
-  var TwitterStrategy = require('passport-twitter').Strategy;
-  var keys2 = require("../twitKeys.js");
-  var twit = new TwitterStrategy(keys2);
-
-// var TWITTER_CONSUMER_KEY = "<Insert Your Key Here>";
-// var TWITTER_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
-// --------------- / Twitter authentication / ----------------------//
+var FACEBOOK_APP_ID = "<Insert Your Key Here>"
+var FACEBOOK_APP_SECRET = "<Insert Your Secret Key Here>";
+// // ---------------- / Facebook authentication / -------------------//
 
 
-// ----------------- Google authentication -----------------------//
-function google() {
-    var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
-    var keys3 = require("../gooKeys.js");
-    var goog = new GoogleStretegy(keys3);
+// // --------------- Twitter authentication ----------------------//
+var TwitterStrategy = require('passport-twitter').Strategy;
+// function twitter() {
+//   var TwitterStrategy = require('passport-twitter').Strategy;
+//   var keys2 = require("../twitKeys.js");
+//   var twit = new TwitterStrategy(keys2);
+// };
+var TWITTER_CONSUMER_KEY = "<Insert Your Key Here>";
+var TWITTER_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
+// // --------------- / Twitter authentication / ----------------------//
 
 
-// var GOOGLE_CONSUMER_KEY = "<Insert Your Key Here>";
-// var GOOGLE_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
+// // ----------------- Google authentication -----------------------//
+var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
+// function google() {
+//     var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
+//     var keys3 = require("../gooKeys.js");
+//     var goog = new GoogleStretegy(keys3);
+// };
+
+var GOOGLE_CONSUMER_KEY = "<Insert Your Key Here>";
+var GOOGLE_CONSUMER_SECRET = "<Insert Your Secret Key Here>";
 
 //------------------ / Google authentication / -----------------------//
 
@@ -74,7 +79,8 @@ module.exports = function(passport) {
             });
         });
 
-    }));
+    }
+    ));
 
     passport.use('signup', new LocalStrategy({
         usernameField : 'email',
@@ -117,8 +123,9 @@ module.exports = function(passport) {
 			    // user.user.address	= ''
 
                 user.save(function(err) {
-                    if (err)
+                    if (err){
                         throw err;
+                    
                 	} else {
     					var user = req.user;
     					user.user.firstName = req.body.firstName;
@@ -132,20 +139,23 @@ module.exports = function(passport) {
                             throw err;
                             return done(null, user);
                         });
-                    });
+                    };
                 
-            };
-        });
-    };
+            });
+        };
+    });
+    }    
+    ));    
 
 
 // Use the FacebookStrategy within Passport.
 // Strategies in Passport require a `verify` function, which accept
 // credentials (in this case, an accessToken, refreshToken, and Facebook
 // profile), and invoke a callback with a user object.
-	passport.use(new FacebookStrategy(keys){
-    		// clientID: FACEBOOK_APP_ID,
-    		// clientSecret: FACEBOOK_APP_SECRET,
+	passport.use(new FacebookStrategy({
+            // var keys = require("../faceKeys.js");
+    		clientID: FACEBOOK_APP_ID,
+    		clientSecret: FACEBOOK_APP_SECRET,
     		callbackURL: "http://localhost:8080/auth/facebook/callback"
   		},
   		function(req, accessToken, refreshToken, profile, done) {
@@ -153,49 +163,50 @@ module.exports = function(passport) {
 
 			process.nextTick(function () {
         		if (!req.user) {
-				    User.findOne({ 'user.email' :  profile.emails[0].value }, function(err, user) {
-        	        if (err){ return done(err);}
-                		if (user) {
-                    	   return done(null, user);
-                		} else {
-                    		var newUser = new User();
-						    newUser.user.firstName = profile.displayName;
-                    		newUser.user.email = profile.emails[0].value;
-						    newUser.user.name = ''
-						    newUser.user.address = ''
+				    User.findOne({ 'user.email' :  profile.emails[0].value }, 
+                        function(err, user) {
+                	        if (err){ return done(err);}
+                        		if (user) {
+                            	   return done(null, user);
+                        		} else {
+                            		var newUser = new User();
+        						    newUser.user.firstName = profile.displayName;
+                            		newUser.user.email = profile.emails[0].value;
+        						    newUser.user.name = ''
+        						    newUser.user.address = ''
 
-                    		newUser.save(function(err) {
-                        		if (err)
-                            	throw err;
-                        		return done(null, newUser);
+                            		newUser.save(function(err) {
+                                		if (err)
+                                    	throw err;
+                                		return done(null, newUser);
+                            		});
+                        		}
+
+                    	   });
+                        } else {
+        				   var user = req.user;
+        				   user.user.firstName = profile.displayName;
+                    	   user.user.email    = profile.emails[0].value;
+        				   user.user.name	= ''
+        				   user.user.address	= ''
+
+                    	   user.save(function(err) {
+                            if (err)
+                            throw err;
+                        	return done(null, user);
                     		});
-                		}
-
-            	   });
-                } else {
-				   var user = req.user;
-				   user.user.firstName = profile.displayName;
-            	   user.user.email    = profile.emails[0].value;
-				   user.user.name	= ''
-				   user.user.address	= ''
-
-            	   user.save(function(err) {
-                    if (err)
-                    throw err;
-                	return done(null, user);
-            		});
         		}
 			});
   		}
-	);
+	));
 
 // Use the TwitterStrategy within Passport.
 // Strategies in passport require a `verify` function, which accept
 // credentials (in this case, a token, tokenSecret, and Twitter profile), and
 // invoke a callback with a user object.
-	passport.use(new TwitterStrategy(keys2){
-		// consumerKey: TWITTER_CONSUMER_KEY,
-		// consumerSecret: TWITTER_CONSUMER_SECRET,
+	passport.use(new TwitterStrategy({
+		consumerKey: TWITTER_CONSUMER_KEY,
+		consumerSecret: TWITTER_CONSUMER_SECRET,
 		callbackURL: "http://192.168.1.101:8080/auth/twitter/callback"
   	},
   	function(req,token, tokenSecret, profile, done) {
@@ -235,15 +246,15 @@ module.exports = function(passport) {
             	}
     	});
   	}
-    );
+    ));
 
 // Use the GoogleStrategy within Passport.
 // Strategies in Passport require a `verify` function, which accept
 // credentials (in this case, an accessToken, refreshToken, and Google
 // profile), and invoke a callback with a user object.
-	passport.use(new GoogleStrategy(keys3){
-		// clientID: GOOGLE_CONSUMER_KEY,
-		// clientSecret: GOOGLE_CONSUMER_SECRET,
+	passport.use(new GoogleStrategy({
+		clientID: GOOGLE_CONSUMER_KEY,
+		clientSecret: GOOGLE_CONSUMER_SECRET,
 		callbackURL: "http://localhost:8080/auth/google/callback"
 	},
 	function(req, accessToken, refreshToken, profile, done) {
@@ -284,7 +295,7 @@ module.exports = function(passport) {
 
     }
  
-    );
+    ));
 
 };
 
