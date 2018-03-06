@@ -65,6 +65,7 @@ var Note = React.createClass({
   */
   renderForm: function(){
     return <div className='note' style={this.style}>
+            <div class='pin'></div>
             <textarea defaultValue={this.props.children} ref="newText" className='form-control'></textarea>
             <span>
               <button onClick={this.save} className="btn btn-success glyphicon glyphicon-floppy-disk"/>
