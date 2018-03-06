@@ -1,33 +1,10 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript">
 <head>
-<meta http-equiv="Content-type" CONTENT="text/html; charset=utf-8">
+<meta http-equiv=”Content-type” CONTENT=”text/html; charset=utf-8″>
 </head>
-<body id="weather-body" onload= "formatIframe()">
+<body id=”weather-body” onload = "formatIframe()">
 <tr>
-<a href= "https://api.darksky.net/forecast/7dbf42258c64a005a20a940261b2d1ba">
-</tr>   
-        var options = {
-        enableHi   ghAccuracy: true,
-        timeout: 5000,
-        maximumAge: 0
-      };
-      
-      function success(pos) {
-        var crd = pos.coords;
-      
-        console.log('Your current position is:');
-        console.log(`Latitude : ${crd.latitude}`);
-        console.log(`Longitude: ${crd.longitude}`);
-        console.log(`More or less ${crd.accuracy} meters.`);
-
-         navigator.geolocation.getCurrentPosition(success, error, options);
-      };
-      
-      function error(err) {
-        console.warn(`ERROR(${err.code}): ${err.message}`);
-      };
-      
-</script>
+  <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=-41.2865&lon=174.7762&name=Wellington color=#00aaff&font=Arial&units=ca"> </iframe>
+</tr>
 </body>
