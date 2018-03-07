@@ -1,35 +1,17 @@
 {
-  "name": "takthat_crud",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "body-parser": "^1.18.2",
-    "chai": "^4.1.2",
-    "express": "^4.16.2",
-    "mocha": "^5.0.2",
-    "mongo": "^0.1.0",
-    "mongoose": "^5.0.9",
-    "morgan": "^1.9.0",
-    "path": "^0.12.7",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "^1.1.1",
-    "yarn": "^1.5.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "name": "reactcrud",
+  "version": "1.0.0",
+  "description": "",
   "main": "server.js",
-  "devDependencies": {},
-  "keywords": [
-    "react"
-  ],
-  "author": "purpletree",
-  "license": "ISC"
+  "scripts": {
+    "test": "react"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9",
+    "morgan": "^1.9.0"
+  }
 }
