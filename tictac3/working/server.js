@@ -15,19 +15,15 @@ app.use(bodyParser.urlencoded({extended:true, limit:'5mb'}));
   
 var mongoose = require('mongoose');  
 var Schema = mongoose.Schema;  
-const userSchema = new Schema({
-  familyName: { type: String, required: true },
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  email: { type: String, required: true },
-  phone: { type: Number, required: true },
-  password: {type: String, required: true},
-  date: { type: Date, default: Date.now, required: true },
-  },
-  { versionKey: false });
+var studentSchema = new Schema({      
+    name: { type: String   },       
+    address: { type: String   },     
+    email: { type: String },       
+    contact: { type: String },       
+},{ versionKey: false });  
    
   
-var model = mongoose.model('user', userSchema, 'user');  
+var model = mongoose.model('student', studentSchema, 'student');  
   
 //api for get data from database  
 app.get("/api/getdata",function(req,res){   
@@ -57,21 +53,14 @@ app.post("/api/Removedata",function(req,res){
   
 //api for Update data from database  
 app.post("/api/Updatedata",function(req,res){   
- 	model.findByIdAndUpdate(req.body.id, { 
-	 	familyName:  req.body.familyname, 
-	 	firstName: req.body.firstname,
-	 	lastName: req.body.lastname,
-	 	email: req.body.email, 
-	 	phone: req.body.phone
-	 },
-
+ model.findByIdAndUpdate(req.body.id, { name:  req.body.name, address: req.body.address, contact: req.body.contact,email:req.body.email },   
 function(err) {  
-	if (err) {  
- 		res.send(err);  
- 	return;  
- 	}  
-	res.send({data:"Record has been Updated..!!"});  
- 	});  
+ if (err) {  
+ res.send(err);  
+ return;  
+ }  
+ res.send({data:"Record has been Updated..!!"});  
+ });  
 })    
   
   
@@ -96,5 +85,5 @@ app.get("*",function(req,res){
   
 //server stat on given port  
 app.listen(port,function(){   
-    console.log("server start on port" + port);  
-}) 
+    console.log("server start on port"+ port);  
+})  
