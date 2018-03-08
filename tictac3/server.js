@@ -33,7 +33,8 @@ var model = mongoose.model('user', userSchema, 'user');
 app.get("/api/getdata",function(req,res){   
  model.find({},function(err,data){  
             if(err){  
-                res.send(err);  
+                res.send(err);
+                console.log(1);  
             }  
             else{             
                 res.send(data);  
@@ -46,7 +47,8 @@ app.get("/api/getdata",function(req,res){
 app.post("/api/Removedata",function(req,res){   
  model.remove({ _id: req.body.id }, function(err) {  
             if(err){  
-                res.send(err);  
+                res.send(err);
+                console.log(2);  
             }  
             else{    
                    res.send({data:"Record has been Deleted..!!"});             
@@ -62,12 +64,14 @@ app.post("/api/Updatedata",function(req,res){
 	 	firstName: req.body.firstname,
 	 	lastName: req.body.lastname,
 	 	email: req.body.email, 
-	 	phone: req.body.phone
+	 	phone: req.body.phone,
+    password: req.body.password
 	 },
 
 function(err) {  
 	if (err) {  
- 		res.send(err);  
+ 		res.send(err);
+    console.log( 3);  
  	return;  
  	}  
 	res.send({data:"Record has been Updated..!!"});  
@@ -81,7 +85,8 @@ app.post("/api/savedata",function(req,res){
     var mod = new model(req.body);  
         mod.save(function(err,data){  
             if(err){  
-                res.send(err);                
+                res.send(err);
+                console.log( 4);                
             }  
             else{        
                  res.send({data:"Record has been Inserted..!!"});  
