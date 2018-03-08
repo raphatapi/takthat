@@ -36,7 +36,11 @@ div.note {
     margin: 2px 0;
     position: absolute;
     word-wrap: break-word;
+<<<<<<< HEAD
     /* overflow: scroll; */
+=======
+    overflow: auto;
+>>>>>>> da92ca5fe2ae8396378ed2a874e708e0d025347d
     cursor: -webkit-grab;
     -webkit-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
 -moz-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
