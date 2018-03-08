@@ -21,8 +21,8 @@ const userSchema = new Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true },
   phone: { type: Number, required: true },
-  password: {type: String, required: true},
-  date: { type: Date, default: Date.now, required: true },
+  password: {type: String, required: true}
+  // date: { type: Date, default: Date.now, required: true },
   },
   { versionKey: false });
    
@@ -60,9 +60,9 @@ app.post("/api/Removedata",function(req,res){
 //api for Update data from database  
 app.post("/api/Updatedata",function(req,res){   
  	model.findByIdAndUpdate(req.body.id, { 
-	 	familyName:  req.body.familyname, 
-	 	firstName: req.body.firstname,
-	 	lastName: req.body.lastname,
+	 	familyName:  req.body.familyName, 
+	 	firstName: req.body.firstName,
+	 	lastName: req.body.lastName,
 	 	email: req.body.email, 
 	 	phone: req.body.phone,
     password: req.body.password
@@ -81,7 +81,7 @@ function(err) {
   
 //api for Insert data from database  
 app.post("/api/savedata",function(req,res){   
-       
+  console.log(req.body, "====", req.query);
     var mod = new model(req.body);  
         mod.save(function(err,data){  
             if(err){  

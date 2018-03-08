@@ -7,7 +7,6 @@ var UserAll = React.createClass({
     lastName: '',
     email: '',
     phone: '',
-    password: '',
     id:'',
     Buttontxt:'Save', 
     data1: []};  
@@ -60,12 +59,11 @@ var UserAll = React.createClass({
   
   EditData(item){           
     this.setState({
-      familyName: item.familyName,
-      firstName: item.firstName,
-      lastName: item.lastName,
+      familyName: item.familyname,
+      firstName: item.firstname,
+      lastName: item.lastname,
       email: item.email,
       phone: item.phone,
-      password: item.password,
       id:item._id,
       Buttontxt:'Update'});  
     },  
@@ -85,8 +83,7 @@ var UserAll = React.createClass({
         'lastName': this.state.lastName,
         'email': this.state.email, 
         'phone': this.state.phone,
-        'password': this.state.password,  
-        'id':this.state.id,  
+        'id':this.state.id  
           
     }  
     $.ajax({  
@@ -117,7 +114,7 @@ var UserAll = React.createClass({
       <tr>
       <td><b>Family Name</b></td>  
         <td>  
-           <input className="form-control" type="text" value={this.state.familyName}    name="familyName" onChange={ this.handleChange } />  
+           <input className="form-control" type="text" value={this.state.familyname}    name="familyname" onChange={ this.handleChange } />  
             <input type="hidden" value={this.state.id}    name="id"  />  
         </td>  
       </tr>
@@ -125,14 +122,14 @@ var UserAll = React.createClass({
       <tr>  
         <td><b>First Name</b></td>  
         <td>  
-           <input type= "text" className="form-control"  value={this.state.firstName}  name="firstName" onChange={ this.handleChange } />    
+           <input type= "text" className="form-control"  value={this.state.firstname}  name="firstname" onChange={ this.handleChange } />    
         </td>  
       </tr>
 
       <tr>
       <td><b>Last Name</b></td>  
         <td>  
-           <input type= "text" className="form-control"  value={this.state.lastName}    name="lastName" onChange={ this.handleChange } />  
+           <input type= "text" className="form-control"  value={this.state.lastname}    name="lastname" onChange={ this.handleChange } />  
         </td>  
       </tr>    
     
@@ -151,12 +148,7 @@ var UserAll = React.createClass({
       </tr>  
   
   
-    <tr>  
-      <td><b>Password</b></td>  
-      <td>  
-        <input type="text"  className="form-control" value={this.state.password}  name="password" onChange={ this.handleChange } />  
-      </td>  
-    </tr>  
+    
   
     <tr>  
       <td></td>  
@@ -184,9 +176,9 @@ var UserAll = React.createClass({
     {this.state.data1.map((item, index) => (  
         <tr key={index}>  
            <td>{index+1}</td>   
-          <td>{item.familyName}</td>                        
-          <td>{item.firstName}</td>
-          <td>{item.lastName}</td>
+          <td>{item.familyname}</td>                        
+          <td>{item.firstname}</td>
+          <td>{item.lastname}</td>
           <td>{item.email}</td>
           <td>{item.phone}</td>  
             
