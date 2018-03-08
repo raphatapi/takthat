@@ -27,18 +27,27 @@ div.board {
 
 }
 
+
+
 div.note {
-    height: 200px;
-    width: 200px;
-    background-color: yellow;
+    height: 220px;
+    width: 230px;
+    background-color: rgb(247, 236, 90);
     margin: 2px 0;
     position: absolute;
     word-wrap: break-word;
-    overflow: scroll;
+    /* overflow: scroll; */
     cursor: -webkit-grab;
-    -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
+-moz-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
+box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);  
 }
+
+div.note:hover{
+    transform: scale(1.1, 1.1); /** default is 1, scale it to 1.5 */
+    opacity: 1;
+}
+
 
 div.note:active {
     cursor: -webkit-grabbing;
@@ -79,4 +88,8 @@ div.note > textarea {
 
 .navbar{
     margin: 0 auto;
+}
+
+glyphicon-plus{
+    color: blue;
 }

@@ -16,8 +16,8 @@ var Note = React.createClass({
   componentWillMount: function(){
     this.style = {
       right: this.randomBetween(0, window.innerWidth - 150)+'px',
-      top: this.randomBetween(0, window.innerHeight - 150)+'px',
-      transform: 'rotate('+ this.randomBetween(-15, 15) + 'deg)'
+      top: this.randomBetween(0, window.innerHeight - 150)+'px'
+      // transform: 'rotate('+ this.randomBetween(-15, 15) + 'deg)'
     };
   },
 
@@ -51,7 +51,7 @@ var Note = React.createClass({
   Normal display mode
 */
   renderDisplay: function(){
-    return <div className='note' style={this.style}>
+    return <div className='note box box2 shadow2' style={this.style}>
             <p>{this.props.children}</p>
             <span>
               <button onClick={this.edit} className="btn btn-primary glyphicon glyphicon-pencil"/>
