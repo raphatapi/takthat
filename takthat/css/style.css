@@ -32,7 +32,7 @@ div.board {
 }
 
 div.note {
-    position: static !important;
+    position: relative !important;
     display: inline-block;
     margin: 5px;
     height: 220px;
