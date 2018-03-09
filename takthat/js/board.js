@@ -13,13 +13,15 @@ var Note = React.createClass({
 /**
   Part of React component life cycle. Gets called before a component renders
 */
-  componentWillMount: function(){
-    this.style = {
-      right: this.randomBetween(0, window.innerWidth - 150)+'px',
-      top: this.randomBetween(0, window.innerHeight - 150)+'px'
-      // transform: 'rotate('+ this.randomBetween(-15, 15) + 'deg)'
-    };
-  },
+// componentWillMount: function(){
+//    this.style = {
+//       right: this.randomBetween(0, window.innerWidth - 150)+'px',
+//       top: this.randomBetween(0, window.innerHeight - 150)+'px'
+//   //     transform: 'rotate('+ this.randomBetween(-15, 15) + 'deg)'
+//   };
+//    },
+
+
 
 /**
   This method gets called after a component rendered. This is part of component life cycle
@@ -44,9 +46,9 @@ var Note = React.createClass({
 /**
   Generates a random number with help of min and max value passed
 */
-  randomBetween: function(min, max){
-    return min+ Math.ceil(Math.random() * max);
-  },
+  // randomBetween: function(min="5", max="10"){
+  //   return min+ Math.ceil(Math.random() * max);
+  // },
 /**
   Normal display mode
 */

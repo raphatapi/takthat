@@ -27,20 +27,19 @@ div.board {
 
 }
 
-
+.element{
+    position: static;
+}
 
 div.note {
+    position: static !important;
+    display: inline-block;
+    margin: 5px;
     height: 220px;
     width: 230px;
     background-color: rgb(247, 236, 90);
-    margin: 2px 0;
-    position: absolute;
     word-wrap: break-word;
-<<<<<<< HEAD
     /* overflow: scroll; */
-=======
-    overflow: auto;
->>>>>>> da92ca5fe2ae8396378ed2a874e708e0d025347d
     cursor: -webkit-grab;
     -webkit-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
 -moz-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
