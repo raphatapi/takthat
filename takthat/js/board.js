@@ -17,7 +17,7 @@ var Note = React.createClass({
     this.style = {
 //       right: this.randomBetween(0, window.innerWidth - 150)+'px',
 //       top: this.randomBetween(0, window.innerHeight - 150)+'px'
-    transform: 'rotate('+ this.randomBetween(-3, 2) + 'deg)'
+    transform: 'rotate('+ this.randomBetween(-3, 3) + 'deg)'
   };
    },
 
@@ -198,6 +198,24 @@ var Board = React.createClass({
         <button onClick={this.addNote.bind(null, "New Note")} className="btn btn-sm btn-success glyphicon glyphicon-plus"/>
     </div>);
   }
+});
+
+function doIframe() {
+  var $iframes = $("iframe.autoHeight"); 
+  $iframes.each(function() {
+      var iframe = this;
+      $(iframe).load(function() {
+          setHeight(iframe);
+      });
+  });
+}
+
+function setHeight(e) {
+e.height = e.contentWindow.document.body.scrollHeight + 35;
+}
+
+$(window).load(function() {
+  doIframe();
 });
 
 React.render(<Board></Board>, document.getElementById("react-container"))
