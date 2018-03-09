@@ -31,9 +31,6 @@ div.board {
 
 }
 
-.element{
-    position: static;
-}
 
 div.note {
     position: relative !important;
@@ -95,6 +92,8 @@ div.note > textarea {
 
 .navbar{
     margin: 0 auto;
+    font-family: 'Rammetto One', cursive;
+    font-weight: bold;
 }
 
 glyphicon-plus{
