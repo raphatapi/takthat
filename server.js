@@ -3,23 +3,25 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser= require('body-parser');
 const config = require('./config/config');
-var cors = require('cors');
+const cors = require('cors');
 const app = express();
-var url = '';
+const url = '';
 
 //Get system IP and then connect to db
-require('dns').lookup(require('os').hostname(), function (err, add, fam) {
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/takthat', { useMongoClient: true }, (err, db) =>{
-    if(err){
-      console.log('Error Opening DB');
-    }else{
-      console.log(`Mongo DB started at port ${config.dbPort}`);
-      app.listen(process.env.PORT || config.serverPort, function(){
-        console.log(`Server started at port ${config.serverPort}`);
-      });
-    }
-  });
-});
+// require('dns').lookup(require('os').hostname(), function (err, add, fam) {
+//   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/takthat', { useMongoClient: true }, (err, db) =>{
+//     if(err){
+//       console.log('Error Opening DB');
+//     }else{
+//       console.log(`Mongo DB started at port ${config.dbPort}`);
+//       app.listen(process.env.PORT || config.serverPort, function(){
+//         console.log(`Server started at port ${config.serverPort}`);
+//       });
+//     }
+//   });
+// });
+
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -39,3 +41,16 @@ app.get('/board', (req, res) => {
 require('./db/models');
 var api = require('./api/api');
 app.use('/api', api);
+
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/takthat",
+  { useMongoClient: true }
+);
+
+// Start the API server
+app.listen(PORT, function() {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});
