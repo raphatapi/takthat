@@ -9,7 +9,7 @@ var url = '';
 
 //Get system IP and then connect to db
 require('dns').lookup(require('os').hostname(), function (err, add, fam) {
-  mongoose.connect(`mongodb://localhost/react-bulletin`, { useMongoClient: true }, (err, db) =>{
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/takthat', { useMongoClient: true }, (err, db) =>{
     if(err){
       console.log('Error Opening DB');
     }else{

@@ -27,10 +27,13 @@
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
     "cors": "^2.7.1",
-    "express": "^4.14.0",
     "jquery": "^3.1.0",
     "mongodb": "^2.2.5",
     "mongoose": "^4.5.8",
-    "nodemon": "^1.10.0"
+    "nodemon": "^1.10.0",
+    "bcrypt": "^1.0.3",
+    "connect-mongo": "^2.0.1",
+    "express": "^4.16.2",
+    "session": "^0.1.0"
   }
 }
