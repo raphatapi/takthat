@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-signin-scope" content="profile email">
+
+    <!-- Specify your app's client ID -->
+    <meta name="google-signin-client_id" content="1068602310947-etee2thc1krgib2bokdo223it9lntuig.apps.googleusercontent.com">
+
+    <!-- Load the Google Platform Library -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Google auth for Tiktak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- Add a Google Sign-In button -->
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+
+    // Get profile information
+        function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+
+    // Send the ID token to your server
+        // After a user successfully signs in, get the user's ID token:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+    // MUST !!!! npm install http-post
+            var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'https://yourbackend.example.com/tokensignin');
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onload = function() {
+                console.log('Signed in as: ' + xhr.responseText);
+                };
+                xhr.send('idtoken=' + id_token);
+                const {OAuth2Client} = require('google-auth-library');
+
+            // To validate an ID token in Node.js, use the Google Auth Library for Node.js. Install the library: !!!!!!!!
+// MUST !!! npm install google-auth-library --save            
+            // Then, call the verifyIdToken() function. For example:            const client = new OAuth2Client(CLIENT_ID);
+            async function verify() {
+            const ticket = await client.verifyIdToken({
+                idToken: token,
+                audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+                // Or, if multiple clients access the backend:
+                //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
+            });
+            const payload = ticket.getPayload();
+            const userid = payload['sub'];
+            // If request specified a G Suite domain:
+            //const domain = payload['hd'];
+            }
+            verify().catch(console.error);
+      };
+    </script>
+    <h1>Hello Google</h1>
+</body>
+</html>
