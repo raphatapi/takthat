@@ -14,7 +14,7 @@ require('dns').lookup(require('os').hostname(), function (err, add, fam) {
       console.log('Error Opening DB');
     }else{
       console.log(`Mongo DB started at port ${config.dbPort}`);
-      app.listen(config.serverPort, function(){
+      app.listen(process.env.PORT || config.serverPort, function(){
         console.log(`Server started at port ${config.serverPort}`);
       });
     }
