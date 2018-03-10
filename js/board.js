@@ -1,5 +1,4 @@
 
-
 url = `${url}/api/notes`;
 /*
   Creating class Note
