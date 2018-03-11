@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
 
 body,
 html,
@@ -18,24 +18,17 @@ body {
 }
 
 div.board {
-
-    /* width: 100%; */
+     box-shadow: inset 0 20px 30px -30px rgba(0,0,0,2.0);
+     -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,2.0);
+     box-shadow: inset 0 20px 20px -20px rgba(0,0,0,2.0);
     background-image: url(cork.jpg);
-    /* background: -moz-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(57%, #eab92d), color-stop(99%, #c79810));
-    background: -webkit-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: -o-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: -ms-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: radial-gradient(ellipse at center, #eab92d 57%, #c79810 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eab92d', endColorstr='#c79810', GradientType=1); */
-
 }
 
 
 div.note {
     position: relative !important;
     display: inline-block;
-    margin: 6px;
+    margin: 10px;
     height: 220px;
     width: 230px;
     background-color: rgb(247, 236, 90);
@@ -53,14 +46,16 @@ div.note:hover{
 }
 
 
+
 div.note:active {
     cursor: -webkit-grabbing;
 }
 
 div.note p {
-    font-size: 22px;
+    font-size: 26px;
     padding: 5px;
-    font-family: "Shadows Into Light", Arial;
+    margin: 2px;
+    font-family: 'Architects Daughter', cursive;
 }
 
 div.note:hover > span {
@@ -86,8 +81,12 @@ div.note > textarea {
 
 .glyphicon-plus {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 6px;
+    right: 60px;
+    font-size: 20px;
+    text-shadow: black 5px 3px 3px;
+    background-color: #0073B2;
+    
 }
 
 .navbar{
@@ -96,6 +95,4 @@ div.note > textarea {
     font-weight: bold;
 }
 
-glyphicon-plus{
-    color: blue;
-}
+
