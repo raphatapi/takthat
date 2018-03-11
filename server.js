@@ -35,7 +35,7 @@ app.get('/', (req,res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/board', (req, res) => {
+app.get('/notes', (req, res) => {
   res.sendFile(__dirname + '/board.html');
 });
 require('./db/models');
