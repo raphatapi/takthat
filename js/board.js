@@ -200,4 +200,4 @@ var Board = React.createClass({
 });
 
 
-React.render(<Board></Board>, document.getElementById("react-container"))
+React.render(<Board />, document.getElementById("react-container"))

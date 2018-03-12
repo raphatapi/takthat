@@ -31,13 +31,15 @@ app.use("/js", express.static(__dirname + '/js'));
 app.use("/images", express.static(__dirname + '/images'));
 app.use("/config", express.static(__dirname + '/config'));
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/notes', (req, res) => {
   res.sendFile(__dirname + '/board.html');
 });
+
+
 require('./db/models');
 var api = require('./api/api');
 app.use('/api', api);
