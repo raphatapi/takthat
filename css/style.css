@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(https://fonts.googleapis.com/css?family=Karma);
 
 body,
 html,
@@ -84,4 +85,24 @@ div.note > textarea {
     font-weight: bold;
 }
 
+
+/* #navbottom{
+    font-size: 10px;
+    position: absolute;
+	width: 100%;
+	height: auto;
+	/* bottom: 0;
+	left: 0; */
+	/* margin-top: 15px;
+    margin-bottom: 0px; */
+    /* font-family: 'Karma', serif;
+    opacity: 1; 
+  background-color: rgba(0, 0, 0, 0.514); */
+/* }  */
+
+
+
+html { 
+    overflow-y: hidden !important; 
+}
 
