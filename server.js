@@ -1,4 +1,4 @@
-
+const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser= require('body-parser');
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/notes', (req, res) => {
-  res.sendFile(__dirname + '/board.html');
+  res.sendFile(path.join(__dirname + '/board.html'));
 });
 
 

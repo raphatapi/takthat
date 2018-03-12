@@ -99,7 +99,7 @@ var Board = React.createClass({
     }
   },
 
-  componentWillMount: function(){
+  componentDidMount: function(){
       var self = this;
       $.ajax({
         url: url,
