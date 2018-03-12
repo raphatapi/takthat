@@ -86,19 +86,29 @@ div.note > textarea {
 }
 
 
-/* #navbottom{
+#navbottom{
     font-size: 10px;
     position: absolute;
 	width: 100%;
 	height: auto;
-	/* bottom: 0;
-	left: 0; */
-	/* margin-top: 15px;
-    margin-bottom: 0px; */
-    /* font-family: 'Karma', serif;
-    opacity: 1; 
-  background-color: rgba(0, 0, 0, 0.514); */
-/* }  */
+	 bottom: 0;
+	left: 0;
+	margin-top: 15px;
+    margin-bottom: 0px; 
+    font-family: 'Karma', serif; 
+}
+
+#purpletree{
+    height:45px;
+    widows: 45px;
+}
+
+#coin{
+    height:45px;
+    width: 45px;
+    position: relative;
+    right: 20px;
+}
 
 
 
