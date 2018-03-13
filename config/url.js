@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV) {
+if (NODE_ENV) {
  var url = 'https://takthat.herokuapp.com'   
 }
 else {
