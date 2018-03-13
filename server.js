@@ -6,7 +6,6 @@ const config = require('./config/config');
 const cors = require('cors');
 const app = express();
 const url = '';
-const auth = require('./config/auth');
 const passport = require('passport');
 
 
