@@ -26,8 +26,8 @@ div.note {
     position: relative !important;
     display: inline-block;
     margin: 10px;
-    height: 220px;
-    width: 230px;
+    height: 230px;
+    width: 240px;
     background-color: rgb(247, 236, 90);
     word-wrap: break-word;
     /* overflow: scroll; */
@@ -42,7 +42,7 @@ div.note:active {
 }
 
 div.note p {
-    font-size: 26px;
+    font-size: 25px;
     padding: 5px;
     margin: 2px;
     font-family: 'Architects Daughter', cursive;
@@ -87,7 +87,7 @@ div.note > textarea {
 
 
 #navbottom{
-    font-size: 10px;
+    font-size: 12px;
     position: absolute;
 	width: 100%;
 	height: auto;
@@ -109,8 +109,6 @@ div.note > textarea {
     position: relative;
     right: 20px;
 }
-
-
 
 html { 
     overflow-y: hidden !important; 
