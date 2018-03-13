@@ -1,1 +1,1 @@
-var url = 'https://takthat.herokuapp.com/';
+var url = 'https://takthat.herokuapp.com';
