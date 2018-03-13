@@ -38,6 +38,7 @@
     "mongoose": "^4.5.8",
     "nconf": "^0.10.0",
     "nodemon": "^1.10.0",
+    "passport": "^0.4.0",
     "session": "^0.1.0"
   }
 }
