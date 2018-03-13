@@ -33,7 +33,7 @@ app.use("/images", express.static(__dirname + '/images'));
 app.use("/config", express.static(__dirname + '/config'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/login2.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/notes', (req, res) => {
