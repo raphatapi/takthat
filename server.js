@@ -6,7 +6,6 @@ const config = require('./config/config');
 const cors = require('cors');
 const app = express();
 const url = '';
-
 //Get system IP and then connect to db
 // require('dns').lookup(require('os').hostname(), function (err, add, fam) {
 //   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/takthat', { useMongoClient: true }, (err, db) =>{

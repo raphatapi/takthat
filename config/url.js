@@ -1,1 +1,7 @@
-var url = 'https://takthat.herokuapp.com';
+
+
+var url = process.env.url
+
+
+// 'http://localhost:3000';
+
