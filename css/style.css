@@ -96,6 +96,7 @@ div.note > textarea {
 	margin-top: 15px;
     margin-bottom: 0px; 
     font-family: 'Karma', serif; 
+    padding-top: 10px;
 }
 
 #purpletree{
