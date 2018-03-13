@@ -6,6 +6,8 @@ const config = require('./config/config');
 const cors = require('cors');
 const app = express();
 const url = '';
+const auth = require('./config/auth');
+
 //Get system IP and then connect to db
 // require('dns').lookup(require('os').hostname(), function (err, add, fam) {
 //   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/takthat', { useMongoClient: true }, (err, db) =>{
@@ -31,7 +33,7 @@ app.use("/images", express.static(__dirname + '/images'));
 app.use("/config", express.static(__dirname + '/config'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/login2.html');
 });
 
 app.get('/notes', (req, res) => {
