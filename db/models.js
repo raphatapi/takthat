@@ -6,4 +6,5 @@ const notesSchema = new Schema({
   created_at: {type: Date, default: Date.now}
 });
 
+
 const Notes = module.exports = mongoose.model('Notes', notesSchema);

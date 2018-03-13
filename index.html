@@ -4,6 +4,7 @@
 	<title>Tak That</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 <!--===============================================================================================-->	
 <link rel="icon" type="image/png" href="images/icons/pin.png"/>
 <!--===============================================================================================-->
@@ -17,6 +18,8 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="css/util.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -42,7 +45,7 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 			<div class="wrap-login100">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-43">
-						Login with Google
+						<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" a href="/auth/google"></div>
 					</span>
 					
 					

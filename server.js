@@ -8,6 +8,7 @@ const app = express();
 const url = '';
 const auth = require('./config/auth');
 
+
 //Get system IP and then connect to db
 // require('dns').lookup(require('os').hostname(), function (err, add, fam) {
 //   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/takthat', { useMongoClient: true }, (err, db) =>{
@@ -33,13 +34,14 @@ app.use("/images", express.static(__dirname + '/images'));
 app.use("/config", express.static(__dirname + '/config'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/login2.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname + '/board.html'));
 });
 
+require('./routes/authRoutes')(app);
 
 require('./db/models');
 var api = require('./api/api');
