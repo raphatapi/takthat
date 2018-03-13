@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 const url = '';
 require("dotenv").config();
-console.log(process.env); // => max
+console.log(process.env.URL); // => max
 // console.log(process.env.DB_HOST); // => localhost
 //Get system IP and then connect to db
 // require('dns').lookup(require('os').hostname(), function (err, add, fam) {
