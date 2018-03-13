@@ -1,4 +1,4 @@
-console.log('this is loaded');
+console.log('this is loaded2');
 
 // keys.js - figure out what set of credentials to return
 if (process.env.NODE_ENV === 'production') {
