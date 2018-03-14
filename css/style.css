@@ -7,11 +7,13 @@ div.board,
 div#react-container {
     height: 100%;
     overflow: auto;
+
 }
 
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 div.board {
