@@ -83,6 +83,11 @@ div.note > textarea {
     
 }
 
+.navbar-brand{
+    color: #0073B2 !important;
+    font-weight: bold !important;
+}
+
 .navbar{
     margin: 0 auto;
     font-family: 'Rammetto One', cursive;
