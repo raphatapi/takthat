@@ -1,5 +1,5 @@
 
-@import url(https://fonts.googleapis.com/css?family=Nanum+Pen+Script);
+@import url(https://fonts.googleapis.com/css?family=Kalam);
 
 body,
 html,
@@ -47,9 +47,9 @@ div.note:active {
 }
 
 div.note p {
-    font-size: 28px;
+    font-size: 20px;
     padding: 5px;
-    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Kalam', cursive;
 }
 
 div.note:hover > span {
