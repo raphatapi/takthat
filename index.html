@@ -8,9 +8,17 @@
 <!--===============================================================================================-->	
 <link rel="icon" type="image/png" href="images/icons/pin.png"/>
 <!--===============================================================================================-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!--===============================================================================================-->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
 integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -22,6 +30,8 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 <!-- Google -->
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+
+
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="css/util.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -30,17 +40,43 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 <body>
 
 
-	<nav class="navbar navbar-default">
+	<!-- NAVBAR AND WEATHER COMPONENT -->
+    <nav class="navbar navbar-default">
 		<div class="container-fluid">
 		  <div class="navbar-header">
 			<a class="navbar-brand" href="/">Tak That</a>
 		  </div>
-		  <ul class="nav navbar-nav">
-			<li class="active"><a href="/notes">Board</a></li>
-			<li><div style="width: 280px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=84222" width="280" height="34" frameborder="0" scrolling="no"></iframe><a style="text-indent: -9999em;z-index: 1;display: block;float: right;width: 20px;position: relative;height: 34px;margin: -34px 0 0 0" href="https://www.willyweather.com/ut/salt-lake-county/salt-lake-city.html" rel="nofollow">forecasts</a></div></li>
-			<!-- <li><a href="#">User</a></li> -->
-		  </ul>
-		</div>
+			  <ul class="nav navbar-nav">
+				<!-- ABOUT US DROPDOWN -->
+				  <li class="dropdown">
+					  <button class="btn btn-default btn-sm dropdown-toggle about" type="button" data-toggle="dropdown"> About Us 
+					  <span class="caret"></span></button>
+				  <ul class="dropdown-menu">
+					  <li><a href="https://github.com/b-withers" target="_blank"><img class="portrait" src="images/portraits/brady.jpg">  Brady Withers</a></li>
+					  <li><a href="https://github.com/ljreader" target="_blank"><img class="portrait" src="images/portraits/LJ.JPG">  LJ Reader</a></li>
+					  <li><a href="https://github.com/airetriton" target="_blank"><img class="portrait" src="images/portraits/nicole.jpg">  Nicole Wobbe-Espinoza
+					  </a></li>
+					  <li><a href="https://github.com/raphatapi" target="_blank"><img class="portrait" src="images/portraits/raph.JPG">  Raphael Tapioca</a></li>
+					  <li><a href="https://github.com/kferny1" target="_blank"><img class="portrait" src="images/portraits/kyle.JPG">  Kyle Fernelius</a></li>
+					  <li class="divider"></li>
+					  <li class="text-center">More Projects</li>
+					  <li class-"divider"></li>
+					  <li><a href="https://b-withers.github.io/storybook/" target="_blank"><img class="portrait" src="images/portraits/story.jpg">   Story Book Adeventures</a></li>
+					  <li><a href="http://up-keeps.herokuapp.com/upkeep#" target="_blank"><img class="portrait" src="images/portraits/up.jpg">   Up-Keep</a></li>
+				  </ul> 
+				  <!-- WEATHER WIDGET-->
+					  <li>
+						<div class="weather" style="width: 280px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=84222" width="300" height="40" frameborder="0" scrolling="no"></iframe><a style="text-indent: -9999em;z-index: 1;display: block;float: right;width: 20px;position: relative;height: 34px;margin: -34px 0 0 0" href="https://www.willyweather.com/ut/salt-lake-county/salt-lake-city.html" rel="nofollow">forecasts</a>
+						</div>
+					</li>
+				  <!-- SPINNING COIN LINK TO SWEARJAR -->
+			  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					<a href="https://b-withers.github.io/Swear-Jar/" target="_blank">
+					  <img id="coin" src="images/coin.gif">
+					</a>
+			  </ul>
+		  </div>
 	  </nav>
 	
 	<div class="limiter">
@@ -125,23 +161,6 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 		</div>
 	</div>
 
-	<!-- Footer -->
-
-
-<!--FOOTER-->
-<!-- <div class="footer navbar navbar-default navbar-fixed-bottom" id="navbottom">
-		<div class="dropup">
-			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">About Us
-			<span class="caret"></span></button>
-			<ul class="dropdown-menu">
-				<li><a href="https://github.com/b-withers" target="_blank">Brady Withers</a></li>
-				<li><a href="https://github.com/ljreader" target="_blank">LJ Reader</a></li>
-				<li><a href="https://github.com/airetriton" target="_blank">Nicole Webbe Espinoza</a></li>
-				<li><a href="https://github.com/raphatapi" target="_blank">Raphael Tapioca</a></li>
-				<li><a href="https://github.com/kferny1" target="_blank">Kyle Fernilios</a></li>
-			</ul>
-		  </div>
-		</div>  -->
 
 </body>
 </html>
