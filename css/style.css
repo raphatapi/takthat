@@ -1,35 +1,42 @@
-@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
-@import url(https://fonts.googleapis.com/css?family=Karma);
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
 
 body,
 html,
 div.board,
 div#react-container {
     height: 100%;
-    overflow: auto;
-
+    overflow: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
 }
 
 div.board {
-     box-shadow: inset 0 20px 30px -30px rgba(0,0,0,2.0);
-     -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,2.0);
-     box-shadow: inset 0 20px 20px -20px rgba(0,0,0,2.0);
+
+    /* width: 100%; */
     background-image: url(cork.jpg);
+    /* background: -moz-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(57%, #eab92d), color-stop(99%, #c79810));
+    background: -webkit-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: -o-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: -ms-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
+    background: radial-gradient(ellipse at center, #eab92d 57%, #c79810 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eab92d', endColorstr='#c79810', GradientType=1); */
+
 }
 
+.element{
+    position: static;
+}
 
 div.note {
-    position: relative !important;
+    position: relative!important;
     display: inline-block;
     margin: 10px;
-    height: 230px;
-    width: 240px;
+    height: 220px;
+    width: 230px;
     background-color: rgb(247, 236, 90);
     word-wrap: break-word;
     /* overflow: scroll; */
@@ -39,15 +46,20 @@ div.note {
 box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);  
 }
 
+div.note:hover{
+    transform: scale(1.1, 1.1); /** default is 1, scale it to 1.5 */
+    opacity: 1;
+}
+
+
 div.note:active {
     cursor: -webkit-grabbing;
 }
 
 div.note p {
-    font-size: 25px;
+    font-size: 22px;
     padding: 5px;
-    margin: 2px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: "Shadows Into Light", Arial;
 }
 
 div.note:hover > span {
@@ -87,45 +99,9 @@ div.note > textarea {
     font-weight: bold;
 }
 
-
-#navbottom{
-    font-size: 14px;
+.weather{
+    float:right;
     position: absolute;
-	width: 100%;
-	height: auto;
-	 bottom: 0;
-	left: 0;
-	margin-top: 15px;
-    margin-bottom: 0px; 
-    font-family: 'Karma', serif; 
-    padding-top: 10px;
-    clear: both;
+    right: 150px;
 }
 
-#purpletree{
-    height:50px;
-    widows: 50px;
-}
-
-#coin{
-    height:50px;
-    width: 50px;
-    position: relative;
-    right: 20px;
-}
-
-html { 
-    overflow-y: hidden !important; 
-}
-
-.weath{  
-        position: relative;
-        top: 9px;
-        left: 85%;
-}
-
-.about{
-    position: relative;
-    top: 10px;
-    margin-right: 10px;
-}
