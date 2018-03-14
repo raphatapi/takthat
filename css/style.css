@@ -96,6 +96,8 @@ div.note > textarea {
 	margin-top: 15px;
     margin-bottom: 0px; 
     font-family: 'Karma', serif; 
+    padding-top: 10px;
+    clear: both;
 }
 
 #purpletree{
@@ -114,3 +116,8 @@ html {
     overflow-y: hidden !important; 
 }
 
+.weather{
+    float:right;
+    position: absolute;
+    right: 150px;
+}
