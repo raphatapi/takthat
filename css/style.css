@@ -113,3 +113,9 @@ div.note > textarea {
     top: 6px;
 }
 
+.portrait{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
