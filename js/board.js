@@ -57,6 +57,7 @@ var Note = React.createClass({
             <span>
               <button onClick={this.edit} className="btn btn-primary glyphicon glyphicon-pencil"/>
               <button onClick={this.remove} className="btn btn-danger glyphicon glyphicon-trash"/>
+              <button onclick={this.edit} className="btn btn-warning glyphicon glyphicon-alert"/>
             </span>
           </div>
   },
