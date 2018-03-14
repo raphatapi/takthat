@@ -22,45 +22,41 @@
     <title>Tak That</title>
 </head>
 <body>
-        <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                  <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Tak That</a>
-                  </div>
+<!-- NAVBAR AND WEATHER COMPONENT -->
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/">Tak That</a>
+              </div>
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="/notes">Home</a></li>
-                    <li class="dropdown">
-                      <button class="btn btn-default btn-sm dropdown-toggle about" type="button" data-toggle="dropdown">About Us
-                      <span class="caret"></span></button>
+                      <li class="dropdown">
+                          <button class="btn btn-default btn-sm dropdown-toggle about" type="button" data-toggle="dropdown">About Us
+                          <span class="caret"></span></button>
                       <ul class="dropdown-menu">
-                        <li><a href="https://github.com/b-withers" target="_blank">Brady</a></li>
-                        <li><a href="https://github.com/ljreader" target="_blank">LJ</a></li>
-                        <li><a href="https://github.com/airetriton" target="_blank">Nicole</a></li>
-                        <li><a href="https://github.com/raphatapi" target="_blank">Raphael</a></li>
-                        <li><a href="https://github.com/kferny1" target="_blank">Kyle</a></li>
-                        </ul>                 
-                    
-
-<div>
-                    <li>
-                      <div class="weather" style="width: 280px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=84222" width="280" height="36" frameborder="0" scrolling="no"></iframe><a style="text-indent: -9999em;z-index: 1;display: block;float: right;width: 20px;position: relative;height: 34px;margin: -34px 0 0 0" href="https://www.willyweather.com/ut/salt-lake-county/salt-lake-city.html" rel="nofollow">forecasts</a>
-                      </div>
-                    </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-              
+                          <li><a href="https://github.com/b-withers" target="_blank">Brady</a></li>
+                          <li><a href="https://github.com/ljreader" target="_blank">LJ</a></li>
+                          <li><a href="https://github.com/airetriton" target="_blank">Nicole</a></li>
+                          <li><a href="https://github.com/raphatapi" target="_blank">Raphael</a></li>
+                          <li><a href="https://github.com/kferny1" target="_blank">Kyle</a></li>
+                      </ul>                 
+                          <li>
+                            <div class="weather" style="width: 280px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=84222" width="280" height="40" frameborder="0" scrolling="no"></iframe><a style="text-indent: -9999em;z-index: 1;display: block;float: right;width: 20px;position: relative;height: 34px;margin: -34px 0 0 0" href="https://www.willyweather.com/ut/salt-lake-county/salt-lake-city.html" rel="nofollow">forecasts</a>
+                            </div>
+                        </li>
+                  </ul>
+              </div>
+          </nav>
+<!-- END OF NAVBAR AND WEATHER-->
            
                 
 
-
-    <div id="react-container"></div>
+<!-- REACT CONTAINER THAT STORES NOTES, INCOMING NOTES FROM BOARD.JS -->
+<div id="react-container"></div>
 
 
 
   <!--FOOTER-->
-  <!-- Footer -->
   <!-- <div>
   <nav class="navbar navbar-default navbar-fixed-bottom" id="navbottom">
       <ul class="nav navbar-nav">
