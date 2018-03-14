@@ -14,7 +14,7 @@ const keys = nconf.get('web');
 // https://code.google.com/apis/console
 const CLIENT_ID = '305565293936-209he1uji2jlilbhjcnjp01fskmr7p3f.apps.googleusercontent.com';
 const CLIENT_SECRET = 'bb81_ZNudniBHdvPUmuJZicC';
-const REDIRECT_URL = 'https://takthat.herokuapp.com/';
+const REDIRECT_URL = 'https://takthat.herokuapp.com';
 
 const oauth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 
