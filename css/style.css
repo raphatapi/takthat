@@ -118,8 +118,14 @@ html {
     overflow-y: hidden !important; 
 }
 
-.weather{
-    float:right;
-    position: absolute;
-    right: 150px;
+.weath{  
+        position: relative;
+        top: 9px;
+        left: 85%;
+}
+
+.about{
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
 }
