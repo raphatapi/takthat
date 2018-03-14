@@ -12,9 +12,9 @@ const keys = nconf.get('web');
 
 // Client ID and client secret are available at
 // https://code.google.com/apis/console
-const CLIENT_ID = '1068602310947-ro8qahfdaj8cau0v56tjj6kde5kljclr.apps.googleusercontent.com';
-const CLIENT_SECRET = 'mVjRIAmzFZa4cPlIC-kL6RQh';
-const REDIRECT_URL = 'http://takthat.com/';
+const CLIENT_ID = '305565293936-209he1uji2jlilbhjcnjp01fskmr7p3f.apps.googleusercontent.com';
+const CLIENT_SECRET = 'bb81_ZNudniBHdvPUmuJZicC';
+const REDIRECT_URL = 'https://takthat.herokuapp.com/';
 
 const oauth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 
