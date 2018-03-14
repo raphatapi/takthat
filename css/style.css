@@ -5,7 +5,7 @@ html,
 div.board,
 div#react-container {
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 body {
@@ -14,17 +14,7 @@ body {
 }
 
 div.board {
-
-    /* width: 100%; */
     background-image: url(cork.jpg);
-    /* background: -moz-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(57%, #eab92d), color-stop(99%, #c79810));
-    background: -webkit-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: -o-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: -ms-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
-    background: radial-gradient(ellipse at center, #eab92d 57%, #c79810 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eab92d', endColorstr='#c79810', GradientType=1); */
-
 }
 
 .element{
@@ -39,11 +29,10 @@ div.note {
     width: 230px;
     background-color: rgb(247, 236, 90);
     word-wrap: break-word;
-    /* overflow: scroll; */
     cursor: -webkit-grab;
     -webkit-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
--moz-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);  
+    -moz-box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);
+    box-shadow: 14px 13px 32px -4px rgba(0,0,0,1);  
 }
 
 div.note:hover{
@@ -102,7 +91,7 @@ div.note > textarea {
 .weather{
     position: relative;
     top: 10px;
-    left: 100%;
+    left: 120%;
 }
 
 .about{
