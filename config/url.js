@@ -1,7 +1,5 @@
 
+var url = 'https://takthat.herokuapp.com';
 
-if (process.env.NODE_ENV === 'production') {
-    var url = 'https://takthat.herokuapp.com';
-} else {
-    var url = 'http://localhost:3000';
-}
+// var url = 'http://localhost:3000';
+
