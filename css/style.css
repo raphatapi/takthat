@@ -5,8 +5,17 @@ body,
 html,
 div.board,
 div#react-container {
-    height: 100%;
+    min-height: 100%;
     overflow: auto;
+}
+
+div#react-container{
+    overflow: hidden;
+
+}
+
+div.board{
+    overflow: hidden;
 }
 
 body {
