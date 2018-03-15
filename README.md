@@ -1,4 +1,4 @@
-# Tak That :tack:
+# Tak That 📌
 
 ## A bulletin board for the digital age.
 ### Click [here](https://takthat.herokuapp.com/) to start collaborating with your family and friends: [Tak That](https://takthat.herokuapp.com/)
@@ -19,7 +19,7 @@
 
 * Users can log-in with their Google account or email and password.
 
-* After logged-in, users can create their notes by clicking on the :plus: sign.
+* After logged-in, users can create their notes by clicking on the ➕ sign.
 
 * Once the note appears on the board, users can edit the text and save the note. Also, the note can be deleted.
 
