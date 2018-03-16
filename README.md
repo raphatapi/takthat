@@ -5,9 +5,13 @@
 
 ### Here is how you run it locally:
 `git clone https://github.com/PurpleTreeUofU/TicTac.git`
+
 `cd TicTac`
+
 `npm install`
+
 `mongod` (separete terminal)
+
 `nodemon`
 
 ### Technologies used:
