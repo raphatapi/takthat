@@ -3,7 +3,7 @@
 
 body,
 html,
-div.board,
+/* div.board, */
 div#react-container {
     min-height: 100%;
     overflow: auto;
@@ -16,15 +16,13 @@ div#react-container{
 
 div.board{
     overflow: hidden;
+    height: 100vh;
+    background-image: url(cork.jpg);
 }
 
 body {
     margin: 0;
     padding: 0;
-}
-
-div.board {
-    background-image: url(cork.jpg);
 }
 
 .element{
