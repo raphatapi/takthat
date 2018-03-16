@@ -23,4 +23,4 @@
 
 * Once the note appears on the board, users can edit the text and save the note. Also, the note can be deleted.
 
-## This app was developed by Purple Tree Group
+## This app was developed by Purple Tree Group ![Logo](/images/purpletree.JPG)
