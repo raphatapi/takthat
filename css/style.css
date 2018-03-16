@@ -2,16 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Kalam);
 
 body,
-html,
-/* div.board, */
-div#react-container {
-    min-height: 100%;
+html {
+    /* min-height: 100%; */
     overflow: auto;
-}
-
-div#react-container{
-    overflow: hidden;
-
 }
 
 div.board{
