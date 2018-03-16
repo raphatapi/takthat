@@ -40,7 +40,7 @@
 
 * Users can log-in with their Google account or email and password.
 
-* After logged-in, users can create their notes by clicking on the ![plus](/images/plus.png) sign.
+* After logged-in, users can create their notes by clicking on the ➕ sign.
 
 * Once the note appears on the board, users can edit the text and save the note. Also, the note can be deleted.
 
