@@ -3,6 +3,23 @@
 ## A bulletin board for the digital age.
 ### Click [here](https://takthat.herokuapp.com/) to start collaborating with your family and friends: [Tak That](https://takthat.herokuapp.com/)
 
+### Here is how you run it locally:
+`git clone https://github.com/PurpleTreeUofU/TicTac.git`
+`cd TicTac`
+`npm install`
+`mongod` (separete terminal)
+`nodemon`
+
+### Technologies used:
+* MongoDB
+* Mongoose
+* ExpressJS
+* ReactJS
+* NodeJS
+* Heroku
+* mLabs
+* Google API
+
 ### Check out a demo of the app:
 
 ![Tak Gif](/images/takthat.gif)
