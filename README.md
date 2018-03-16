@@ -5,7 +5,7 @@
 
 ### Check out a demo of the app:
 
-![Tak Gif](/public/images/gif.gif)
+![Tak Gif](/images/takthat.gif)
 
 ### It's also mobile friendly:
 
