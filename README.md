@@ -9,7 +9,7 @@
 
 ### It's also mobile friendly:
 
-![Mobile Gif](/public/images/mobile.gif)
+![Mobile Gif](/images/mobile.gif)
 
 ### Built with MongoDB, Mongoose, NodeJS, ExpressJS and ReactJS.
 
