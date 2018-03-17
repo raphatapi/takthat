@@ -57,7 +57,7 @@ var Note = React.createClass({
             <span>
               <button onClick={this.edit} className="btn btn-primary glyphicon glyphicon-pencil"/>
               <button onClick={this.remove} className="btn btn-danger glyphicon glyphicon-trash"/>
-              <button onclick={this.edit} className="btn btn-warning glyphicon glyphicon-alert"/>
+              <button onclick={this.push} className="btn btn-warning glyphicon glyphicon-alert"/>
             </span>
           </div>
   },
@@ -153,6 +153,17 @@ var Board = React.createClass({
       notesArr.splice(index, 1);
       self.setState({notes: notesArr});
     });
+  },
+
+  push: function(index){
+    let self = this;
+    let notesArr = this.state.notes;
+    let notesObj = notesArr[index];
+    $ajax({
+      url: url,
+      type: 'POST',
+      data: {id: notesObj.id},
+    }).then(function(){})
   },
 
   /**

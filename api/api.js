@@ -45,5 +45,14 @@ router.route('/notes')
 		res.send("Deleted...");
 	})
 });
+router.route('/push')
+.post(function(req, res){
+  Notes.find(function(err, notes){
+    if(err){
+      return res.send(500, err);
+    }
+    return res.json(notes);
+  })
+})
 
 module.exports = router;

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser= require('body-parser');
 const config = require('./config/config');
 const cors = require('cors');
+// const webpush = require('web-push');
 const app = express();
 const url = '';
 const passport = require('passport');
@@ -57,10 +58,40 @@ app.get('/auth/google', passport.authenticate('google', {
         res.send(req.user);
     });
 
+    // app.post('/api/send-push-msg', (req, res) => {
+    //   const options = {
+    //     vapidDetails: {
+    //       subject: 'https://developers.google.com/web/fundamentals/',
+    //       publicKey: req.body.applicationKeys.public,
+    //       privateKey: req.body.applicationKeys.private
+    //     },
+    //     // 1 hour in seconds.
+    //     TTL: 60 * 60
+    //   };
+    
+    //   webpush.sendNotification(
+    //     req.body.subscription,
+    //     req.body.data,
+    //     options
+    //   )
+    //   .then(() => {
+    //     res.status(200).send({success: true});
+    //   })
+    //   .catch((err) => {
+    //     if (err.statusCode) {
+    //       res.status(err.statusCode).send(err.body);
+    //     } else {
+    //       res.status(400).send(err.message);
+    //     }
+    //   });
+    //   });
+    
+      
+
 require('./db/models');
 var api = require('./api/api');
 app.use('/api', api);
-
+// 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
