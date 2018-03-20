@@ -4,9 +4,9 @@
 ### Click [here](https://takthat.herokuapp.com/) to start collaborating with your family and friends: [Tak That](https://takthat.herokuapp.com/)
 
 ### Here is how you run it locally:
-`git clone https://github.com/PurpleTreeUofU/TicTac.git`
+`git clone https://github.com/raphatapi/takthat.git`
 
-`cd TicTac`
+`cd takthat`
 
 `npm install`
 
